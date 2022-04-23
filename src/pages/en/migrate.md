@@ -40,8 +40,8 @@ Read [RFC0019](https://github.com/withastro/rfcs/blob/main/proposals/0019-config
 Astro v0.26 releases a brand new Markdown API for your content. This included three major user-facing changes:
 - You can now `import`/`import()` markdown content directly using an ESM import.
 - A new `Astro.glob()` API, for easier glob imports (especially for Markdown).
-- **BREAKING CHANGE:** `Astro.fetchContent()` has been removed and replaced by `Astro.glob()`
-- **BREAKING CHANGE:** Markdown objects have an updated interface. 
+- **BREAKING CHANGE:** `Astro.fetchContent()` has been removed and replaced by `Astro.glob()`. This also returns new results which no longer include `.astro` and any chield fields. To retrieve this data you need to use `.default()` on each result item.
+- **BREAKING CHANGE:** Markdown objects have an updated interface.
 
 ```diff
 // v0.25
